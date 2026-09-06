@@ -89,7 +89,7 @@ export default function Footer() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
               <span className="relative inline-flex size-2 rounded-full bg-accent" />
             </span>
-            Available for select projects — {year}
+            Dostępny na nowe projekty — {year}
           </span>
           <span className="mono text-xs text-paper/40">
             © {year} Filip Grzelczyk. Wszelkie prawa zastrzeżone.

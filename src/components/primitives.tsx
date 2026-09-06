@@ -42,7 +42,7 @@ export function MaskLines({
   return (
     <span className={className}>
       {lines.map((line, i) => (
-        <span key={i} className="block overflow-hidden">
+        <span key={i} className="-mb-[0.2em] block overflow-hidden pb-[0.2em]">
           <motion.span
             className="block"
             initial={reduce ? false : { y: "110%" }}

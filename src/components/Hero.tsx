@@ -37,11 +37,12 @@ export default function Hero() {
       <div className="grid gap-12 lg:grid-cols-[1.35fr_1fr] lg:items-end">
         {/* Headline */}
         <div>
-          <h1 className="display text-[clamp(3.2rem,13vw,11rem)] uppercase">
+          <h1 className="display text-[clamp(2.6rem,10vw,8.5rem)] uppercase">
             <MaskLines
               lines={[
                 <>Tworzę</>,
-                <>nowoczesne&nbsp;strony</>,
+                <>nowoczesne</>,
+                <>strony</>,
                 <span className="italic text-accent" style={{ fontWeight: 900 }}>
                   dla firm.
                 </span>,

@@ -3,13 +3,13 @@ import { Reveal } from "./primitives"
 const STEPS = [
   {
     no: "01",
-    t: "Discovery",
-    d: "Rozmawiamy o Twoim biznesie, klientach i celach. Zbieram wymagania, analizuję i definiuję, co strona ma realnie osiągnąć.",
+    t: "Poznanie",
+    d: "Rozmawiamy o Twoim biznesie oraz celach. Zbieram wymagania, analizuję i definiuję, jak strona ma realnie wyglądać.",
   },
   {
     no: "02",
     t: "Strategia",
-    d: "Projektuję strukturę treści, mapę strony i ścieżki konwersji. Ustalamy priorytety, zanim powstanie pierwszy piksel.",
+    d: "Na podstawie rozmowy przygotowuję strukturę treści i mapę strony. Otrzymujesz widełki kosztowe oraz rekomendację od czego najlepiej zacząć.",
   },
   {
     no: "03",
@@ -19,12 +19,12 @@ const STEPS = [
   {
     no: "04",
     t: "Realizacja",
-    d: "Koduję stronę w React / Next.js. Responsywność, wydajność i dostępność są wpisane w każdy komponent.",
+    d: "Koduję stronę w React / Next.js. Pracuję w etapach, na bieżąco pokazuję działającą wersję i zbieram Twój feedback. Responsywność, wydajność i dostępność są wpisane w każdy komponent.",
   },
   {
     no: "05",
     t: "Przekazanie",
-    d: "Wdrażam, optymalizuję i konfiguruję analitykę. Przekazuję stronę gotową do pracy.",
+    d: "Wdrażam, optymalizuję i przekazuję projekt gotowy do działania.",
   },
 ]
 
