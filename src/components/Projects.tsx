@@ -21,7 +21,7 @@ const PROJECTS: Project[] = [
     sector: "Usługi wykończeniowe",
     desc: "Strona firmowa dla ekipy zajmującej się pracami wykończeniowymi — przejrzysta oferta usług, galeria realizacji i szybki formularz wyceny.",
     tech: ["Next.js", "React", "Tailwind"],
-    img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=800&fit=crop&auto=format",
+    img: "/images/prace-wykonczeniowe.png",
     span: "wide",
     url: "https://prace-wykonczeniowe.vercel.app/",
   },
