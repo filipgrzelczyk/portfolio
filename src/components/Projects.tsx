@@ -7,23 +7,23 @@ type Project = {
   title: string
   sector: string
   desc: string
-  result: string
   tech: string[]
   img: string
   span: "wide" | "tall"
+  url?: string
 }
 
 const PROJECTS: Project[] = [
   {
     no: "01",
     kind: "Website",
-    title: "Volt Interiors",
-    sector: "Architektura wnętrz",
-    desc: "Editorialowa strona portfolio studia projektowego z płynnymi przejściami między realizacjami.",
-    result: "+180% zapytań ofertowych",
-    tech: ["Next.js", "Motion", "Sanity"],
-    img: "https://images.unsplash.com/photo-1678690832311-bb6e361989ca?w=1200&h=800&fit=crop&auto=format",
+    title: "Prace Wykończeniowe",
+    sector: "Usługi wykończeniowe",
+    desc: "Strona firmowa dla ekipy zajmującej się pracami wykończeniowymi — przejrzysta oferta usług, galeria realizacji i szybki formularz wyceny.",
+    tech: ["Next.js", "React", "Tailwind"],
+    img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=800&fit=crop&auto=format",
     span: "wide",
+    url: "https://prace-wykonczeniowe.vercel.app/",
   },
   {
     no: "02",
@@ -31,7 +31,6 @@ const PROJECTS: Project[] = [
     title: "Northbeam",
     sector: "Aplikacja B2B",
     desc: "Konwersyjny landing dla startupu z sekcją cenową i testami A/B na CTA.",
-    result: "6.2% konwersji na trial",
     tech: ["React", "TypeScript", "Tailwind"],
     img: "https://images.unsplash.com/photo-1542837336-d14bdf342f9b?w=900&h=1100&fit=crop&auto=format",
     span: "tall",
@@ -42,21 +41,9 @@ const PROJECTS: Project[] = [
     title: "Atelier Nord",
     sector: "Moda premium",
     desc: "Sklep z autorskim koszykiem, płynnym checkoutem i mobilnym pierwszeństwem.",
-    result: "1.8× wyższa wartość koszyka",
     tech: ["Next.js", "Shopify", "Stripe"],
     img: "https://images.unsplash.com/photo-1648803336451-d882ce46e68c?w=900&h=1100&fit=crop&auto=format",
     span: "tall",
-  },
-  {
-    no: "04",
-    kind: "Brand Website",
-    title: "Lumen Studio",
-    sector: "Studio kreatywne",
-    desc: "Odważna strona marki z interaktywną typografią i sekcjami sterowanymi scrollem.",
-    result: "Nagroda CSS Design Awards",
-    tech: ["Next.js", "Motion", "WebGL"],
-    img: "https://images.unsplash.com/photo-1787262737237-b627fde76a8e?w=1200&h=800&fit=crop&auto=format",
-    span: "wide",
   },
 ]
 
@@ -69,7 +56,9 @@ function Card({ p }: { p: Project }) {
       }
     >
       <a
-        href="#kontakt"
+        href={p.url ?? "#kontakt"}
+        target={p.url ? "_blank" : undefined}
+        rel={p.url ? "noreferrer" : undefined}
         className="group block"
         aria-label={`Projekt: ${p.title}`}
       >
@@ -110,16 +99,11 @@ function Card({ p }: { p: Project }) {
         </div>
 
         {/* meta below */}
-        <div className="mt-4 flex items-start justify-between gap-4">
-          <div>
-            <h3 className="display text-2xl sm:text-3xl">{p.title}</h3>
-            <p className="mono mt-1 text-xs uppercase tracking-widest text-ink-soft">
-              {p.sector}
-            </p>
-          </div>
-          <span className="mono whitespace-nowrap rounded-full border border-line px-3 py-1 text-[10px] uppercase tracking-widest text-accent">
-            {p.result}
-          </span>
+        <div className="mt-4">
+          <h3 className="display text-2xl sm:text-3xl">{p.title}</h3>
+          <p className="mono mt-1 text-xs uppercase tracking-widest text-ink-soft">
+            {p.sector}
+          </p>
         </div>
         <div className="mt-3 flex flex-wrap gap-2">
           {p.tech.map((t) => (
