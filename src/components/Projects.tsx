@@ -11,6 +11,7 @@ type Project = {
   img: string
   span: "wide" | "tall"
   url?: string
+  fit?: "cover" | "contain"
 }
 
 const PROJECTS: Project[] = [
@@ -24,6 +25,7 @@ const PROJECTS: Project[] = [
     img: "/images/prace-wykonczeniowe.png",
     span: "wide",
     url: "https://prace-wykonczeniowe.vercel.app/",
+    fit: "contain",
   },
   {
     no: "02",
@@ -72,7 +74,9 @@ function Card({ p }: { p: Project }) {
               src={p.img}
               alt={`Realizacja ${p.title} — ${p.sector}`}
               loading="lazy"
-              className="h-full w-full object-cover"
+              className={`h-full w-full ${
+                p.fit === "contain" ? "object-contain" : "object-cover"
+              }`}
               initial={false}
               whileHover={reduce ? {} : { scale: 1.06 }}
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
